@@ -1,22 +1,20 @@
-pipeline{
-    agente any{
-        stage('Build'){
-            steps{
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
                 echo "Etapa Build no disponible"
             }
-            
         }
-        stage('Tests'){
-            steps{
+        stage('Tests') {
+            steps {
                 echo "Etapa Test no disponible"
             }
-            
         }
-        stage('Deploy'){
-            steps{
+        stage('Deploy') {
+            steps {
                 sh "docker compose up"
             }
-            
         }
     }
 }
