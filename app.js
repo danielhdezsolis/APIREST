@@ -1,11 +1,9 @@
-const { request} = require('express');
 const express = require('express');
 const dbconnect = require('./config');
-const ModelUser = require('./userModel')
+const ModelUser = require('./userModel');
+
 const app = express();
-
 const router = express.Router();
-
 
 // Método GET para obtener todas las carreras (solo idCarrera y Nombre)
 router.get("/", async (req, res) => {
@@ -76,8 +74,6 @@ router.delete("/:idCarrera/:Especialidad", async (req, res) => {
         res.status(500).send("Error interno del servidor");
     }
 });
-
-
 
 app.use(express.json())
 app.use(router)
