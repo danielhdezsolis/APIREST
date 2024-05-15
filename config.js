@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const dbconnect = async () => {
     try {
         mongoose.set('strictQuery', true);
-        //Para exportarlo a docker utilice la ruta de abajo, pero en localhost deberia ser la ruta de mi base de datos
+        //Para exportarlo a docker "mongodb://mongo/APIREST"utilice esta ruta de mongoDB, 
+        //pero en localhost deberia ser la ruta de mi base de datos
         //mongodb://localhost:27017/APIREST
         await mongoose.connect("mongodb://mongo/APIREST", {
             useNewUrlParser: true,
